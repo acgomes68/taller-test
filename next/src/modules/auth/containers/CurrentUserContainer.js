@@ -22,8 +22,8 @@ let refetchedOnClient = false
 const CurrentUserContainer = ({ children }) => (
   <Query query={ query }>
     { ({ loading, error, data, refetch, ...result }) => {
-      if (loading) return "Loading...";
-      if (error) return `Error! ${error.message}`;
+      if (loading) return 'Loading...'
+      if (error) return `Error! ${error.message}`
       // Force a refetch on the client inside to make sure
       // the cached SSR anonymous user is replaced, in case
       // the user is already logged in..
